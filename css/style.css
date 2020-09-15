@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
+:root {
+    --modo-noturno: invert(100%);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -35,14 +39,11 @@ div#interface {
 h1 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 25pt;
-    margin-left: 45px;
-    border-bottom: 1px solid rgb(184, 184, 184);
 }
 
 h2 {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 20pt;
-    border-bottom: 1px solid rgb(184, 184, 184);
 }
 
 /* CABECALHO */
@@ -55,41 +56,52 @@ header {
     height: 165px;
     border-bottom: 1px solid black;
 }
+
 img#logo {
     position: relative;
     top: 30px;
     left: 40px;
+    transition: ease-out 0.2s;
 }
+
+img#logo:hover {
+    transform: scale(1.03);
+    transition: ease-in 0.2s;
+}
+
 div#informacoes {
     position: relative;
     left: 64.5%;
     width: 450px;
     bottom: 65px;
 }
+
 .icone-topo-1 {
-    filter: invert(100%);
+    filter: var(--modo-noturno, 100%);
     position: relative;
-    width: 20px;
-    top: -5px;
+    top: -2px;
     right: -60px;
 }
+
 .icone-topo-2 {
-    filter: invert(100%);
+    filter: var(--modo-noturno, 100%);
     position: relative;
-    width: 20px;
     top: -5px;
     right: -55px;
 }
+
 .icone-topo-3 {
+    filter: var(--modo-noturno, 100%);
     position: relative;
-    width: 23px;
     margin-left: 10px;
     top: 30px;
     right: 36px;
 }
+
 .icone-topo-3:hover {
     transform: scale(1.1);
 }
+
 .info-topo {
     display: inline-block;
     position: relative;
@@ -99,6 +111,7 @@ div#informacoes {
     color: rgb(0, 0, 0);
     font-family: 'Open Sans Condensed', sans-serif;
 }
+
 .icones-menu {
     width: 20px;
     position: absolute;
@@ -107,6 +120,7 @@ div#informacoes {
     display: inline-block;
     pointer-events: none;
 }
+
 nav#menu ul {
     list-style: none;
     position: absolute;
@@ -119,6 +133,7 @@ nav#menu ul {
     border-top: 2px solid rgb(114, 114, 114);
     z-index: 2;
 }
+
 nav#menu ul::before {
     position: absolute;
     top: 38px;
@@ -129,6 +144,7 @@ nav#menu ul::before {
     box-shadow: 0px 0px 5px black;
     background-color: rgba(255, 255, 255, 0);
 }
+
 nav#menu ul li {
     display: inline-block;
     padding: 0px 15px 0px 45px;
@@ -140,10 +156,12 @@ nav#menu ul li {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 18pt;
 }
+
 nav#menu ul li:hover {
     background-color: rgb(59, 105, 192);
     transition: all 0.5s;
 }
+
 div#modo-noturno {
     position: relative;
     width: 102px;
@@ -152,27 +170,30 @@ div#modo-noturno {
     z-index: 2;
     left: 87.8%;
     bottom: 263px;
-    
 }
+
 div#modo-noturno:hover {
     background-image: url("../img/fundo-botao.png");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
     padding: 0px 10px;
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition: all 0.8s;
 }
+
 img#lampada {
     position: relative;
     top: 2px;
 }
+
 span.info-lamp {
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
     vertical-align: 25%;
     padding-right: 5px;
 }
+
 a.link-lamp {
     text-decoration: none;
 }
@@ -186,6 +207,7 @@ a.link-lamp {
     height: 250px;
     background-color: black;
 }
+
 .intro-texto {
     position: absolute;
     color: white;
@@ -204,16 +226,20 @@ a.link-lamp {
 section#corpo {
     display: block;
     float: left;
-    width: 840px;
-    padding-right: 25px;
+    width: 800px;
+    margin-left: 45px;
 }
+
 ul#servicos {
     list-style: none;
+    margin-left: -35px;
+    cursor: default;
 }
+
 ul#servicos li {
     float: left;
     margin: 10px 10px;
-    width: 380px;
+    width: 375px;
     height: 150px;
     background-color: black;
     color: rgb(0, 0, 0);
@@ -227,6 +253,7 @@ ul#servicos li {
     background-size: 110%;
     background-position: 50% 50%;
 }
+
 ul#servicos li:hover {
     font-size: 21pt;
     transform: scale(1.03);
@@ -234,23 +261,30 @@ ul#servicos li:hover {
     background-size: 100%;
     background-position: 50% 50%;
 }
+
 ul#servicos li#foto-01 {
     background-image: url('../img/projetos.jpg');
 }
+
 ul#servicos li#foto-02 {
     background-image: url('../img/construcoes.jpg');
     color: white;
 }
+
 ul#servicos li#foto-03 {
     background-image: url('../img/reformas.jpg');
 }
+
 ul#servicos li#foto-04 {
     background-image: url('../img/engenharia.jpg');
     color: white;
 }
+
 ul#servicos li#foto-05 {
     background-image: url('../img/plantas-humanizadas.webp');
+    background-position: 50% 80%;
 }
+
 ul#servicos li#foto-06 {
     background-image: url('../img/arquitetura.jpg');
     color: white;
@@ -263,12 +297,14 @@ aside#lateral {
     float: right;
     width: 350px;
     padding-right: 45px;
-    padding-top: 15px;
+    padding-top: 20px;
 }
-form  {
+
+form {
     display: table;
     width: 30px;
 }
+
 form fieldset {
     background-color: rgb(226, 226, 226);
     padding-top: 20px;
@@ -277,24 +313,29 @@ form fieldset {
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.726);
 }
+
 form legend {
     font-size: 18pt;
     padding-top: 50px;
 }
+
 form p { 
     display: table-row;
 }
+
 label.dados { 
     display: table-cell;
     padding-right: 30px;
     padding-bottom: 10px;
     font-size: 15pt;
 }
+
 label.ped {
     display: table-cell;
     padding-bottom: 10px;
     font-size: 15pt;
 }
+
 input {
     display: table-cell;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -303,12 +344,14 @@ input {
     border: 1px solid rgba(0, 0, 0, 0.308);
     padding: 5px;
 }
+
 select {
     border-radius: 5px;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 13pt;
     border: 1px solid rgba(0, 0, 0, 0.308);
 }
+
 textarea {
     border-radius: 5px;
     width: 195px;
@@ -316,6 +359,7 @@ textarea {
     padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.308);
 }
+
 input.botao-enviar {
     font-size: 14pt;
     width: 100px;
@@ -324,6 +368,7 @@ input.botao-enviar {
     background-color: rgb(241, 241, 241);
     transition: all 0.2s;
 }
+
 input.botao-enviar:hover {
     color: white;
     background-color: rgb(119, 119, 197);
@@ -340,18 +385,21 @@ footer#rodape {
     height: 200px;
     margin-top: 680px;
 }
+
 img#logo-rodape {
     margin-left: 50%;
     margin-top: 35px;
     transform: translateX(-50%);
     filter: drop-shadow(1px 1px 1px #000000);
 }
+
 nav#menu-rodape ul {
     margin-left: 49%;
     transform: translateX(-50%);
     margin-top: -20px;
     width: 340px;
 }
+
 nav#menu-rodape ul li {
     display: inline-block;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -360,25 +408,31 @@ nav#menu-rodape ul li {
     padding: 10px;
     filter: drop-shadow(1px 1px 1px #000000)
 }
+
 nav#menu-rodape ul li:hover {
     text-decoration: underline;
 }
+
 div#info-rodape {
     width: 100px;
     height: 100px;
     margin-left: 88%;
     margin-top: -75px;
 }
+
 div#info-rodape a {
     text-decoration: none;
 }
+
 div#info-rodape img {
     padding-left: 15px;
-    filter: invert(100%) drop-shadow(1px 1px 4px #000000);
+    filter: drop-shadow(1px 1px 2px #000000);
 }
+
 div#info-rodape img:hover {
     transform: scale(1.1);
 }
+
 input#contato-rodape {
     width: 100px;
     font-size: 15pt;
@@ -386,14 +440,28 @@ input#contato-rodape {
     text-decoration: none;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.521);
 }
+
 input#contato-rodape:hover {
     text-decoration: underline;
     transform: scale(1.05);
+    cursor: pointer;
 }
+
 div#copyright {
     text-align: center;
     line-height: 40px;
-    color: white;
     height: 40px;
-    background-color: rgb(27, 27, 27)
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-decoration: none;
+}
+
+div#copyright a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px black;
+}
+
+div#copyright a:hover {
+    text-decoration: underline;
 }
