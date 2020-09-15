@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3JE - Construções</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div id="guia"></div>
+    <div id="interface">
+    <header id="cabecalho">
+        <img id="logo" src="img\logo.png" alt="Logo da Empresa">
+        <nav id="menu">
+            <ul>
+                <a href="index.html"><img class="icones-menu" src="img/home.png" alt="ícone Início"><li style="background-color: rgb(39, 79, 155);">Início</li></a>
+                <a href="empreendimentos.html"><img class="icones-menu" src="img/empreendimentos.png" alt="Ícone contato"><li>Empreendimentos</li></a>
+                <a href="contato.html"><img class="icones-menu" src="img/contato.png" alt=""><li>Contato</li></a>
+                <a href="sobre.html"><img class="icones-menu" src="img/sobre-nos.png" alt=""><li>Sobre nós</li></a>
+            </ul>
+        </nav>
+        <div id="informacoes">
+            <img class="icone-topo-1" src="img/contato-topo.png" alt="Contato do topo"><span class="info-topo">(21) 972743556</span>
+            <img class="icone-topo-2" src="img/mail.png" alt="Email para contato"><span class="info-topo">nycolaslourenco.contato@gmail.com</span>
+            <a target="_blank" href="https://www.instagram.com/"><img class=icone-topo-3 src="img/facebook.png" alt="ícone facebook"></a>
+            <a target="_blank" href="https://www.facebook.com/"><img class="icone-topo-3" src="img/instagram.png" alt="Ícone instagram"></a>
+        </div>
+    </header>
+    
+    <div id="titulo-pagina">
+        <span class="intro-texto">Conheça nossos serviços!</span>
+        <div class="intro-opacidade"></div>
+        <img src="img/apresentacao.jpg" alt="Imagem de apresentacao">
+        <div id="modo-noturno" onmouseover="mudaImagem('img/lua.png')" onmouseout="mudaImagem('img/lamp.png')">
+            <a class="link-lamp" href=""><span class="info-lamp">Apague a luz!</span>
+            <img id="lampada" src="img/lamp.png" alt="Lâmpada"></a>
+        </div>      
+    </div>
+    
+    <section id="corpo">
+        <h1>Realizando sonhos!</h1>
+        <ul id="servicos">
+            <li id="foto-01">Projetos</li>
+            <li id="foto-02">Construções</li>
+            <li id="foto-03">Reformas</li>
+            <li id="foto-04">Engenharia</li>
+            <li id="foto-05">Plantas Humanizadas</li>
+            <li id="foto-06">Arquitetura</li>
+        </ul>
+    </section>
+
+    <aside id="lateral"> 
+        <h2>Fale Conosco</h2>
+        <form action="" method="POST">
+            <fieldset id="dados">
+                <legend>Dados</legend>
+                <p><label class="dados" for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" placeholder="Nome" maxlength="30" size="30"></p>
+                <p><label class="dados" for="cSobre">Sobrenome: </label><input type="text" name="tSobre" id="cSobre" placeholder="Sobrenome" maxlength="30" size="30"></p>
+                <p><label class="dados" for="cMail">E-mail: </label><input type="mail" name="tMail" id="cMail" placeholder="E-mail" maxlength="30" size="30"></p>
+                <p><label class="dados" for="cTel">Telefone: </label><input type="text" name="tTel" id="cTel" placeholder="Telefone" maxlength="30" size="30"></p>
+                <p><label class="ped" for="cSer">Serviço: </label>
+                    <select name="tSer" id="cSer">
+                        <option value="projetos">Projetos</option>
+                        <option value="construcoes" selected>Construções</option>
+                        <option value="reformas">Reformas</option>
+                        <option value="engenharia">Engenharia</option>
+                        <option value="plantas-h">Plantas Humanizadas</option>
+                        <option value="arquitetura">Arquitetura</option>
+                    </select>
+                </p>
+                <p><label class="ped" for="cDet" style="vertical-align: top;">Detalhes:</label><textarea name="tDet" id="cDet" cols="30" rows="11" placeholder="Deixe aqui o seu pedido."></textarea>
+                </p>
+                <input class="botao-enviar" type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </aside>
+
+    <footer id="rodape">
+        <img width="200px" id="logo-rodape" src="img/logo.png" alt="Logo Rodapé">
+        <div id="info-rodape">
+            <a target="_blank" href="https://www.instagram.com/"><img width="25px" src="img/facebook.png" alt="Ícone facebook"></a>
+            <a target="_blank" href="https://www.facebook.com/"><img width="25px" src="img/instagram.png" alt="Ícone Instagram"></a>
+            <a href="contato.html"><input type="button" value="Contato" id="contato-rodape"></a>
+        </div>
+        <nav id="menu-rodape">
+            <ul>
+                <a href="index.html#cabecalho"><li>Início</li></a>
+                <a href="empreendimentos.html"><li>Empreendimentos</li></a>
+                <a href="sobre.html"><li>Sobre Nós</li></a>
+            </ul>
+        </nav>
+        <div id="copyright">
+            <p>&copy; 2020 por Nycolas F. Lourenço</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

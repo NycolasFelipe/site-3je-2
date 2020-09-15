@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(204, 204, 204);
+    background-image: url("../img/fundo.jpg");
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+div#guia {
+    display: none;
+    position: absolute;
+    opacity: .5;
+    background-color: black;
+    width: 1190px;
+    height: 1500px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+div#interface {
+    width: 1280px;
+    height: 1200px;
+    background-color: rgb(241, 241, 241);
+    margin: -10px auto;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.301);
+}
+
+h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25pt;
+    margin-left: 45px;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20pt;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+/* CABECALHO */
+
+header {
+    background-image: url("../img/header-background.png");
+    background-position: 0% 20%;
+    background-color: rgb(199, 199, 199);
+    background-size: cover;
+    height: 165px;
+    border-bottom: 1px solid black;
+}
+img#logo {
+    position: relative;
+    top: 30px;
+    left: 40px;
+}
+div#informacoes {
+    position: relative;
+    left: 64.5%;
+    width: 450px;
+    bottom: 65px;
+}
+.icone-topo-1 {
+    filter: invert(100%);
+    position: relative;
+    width: 20px;
+    top: -5px;
+    right: -60px;
+}
+.icone-topo-2 {
+    filter: invert(100%);
+    position: relative;
+    width: 20px;
+    top: -5px;
+    right: -55px;
+}
+.icone-topo-3 {
+    position: relative;
+    width: 23px;
+    margin-left: 10px;
+    top: 30px;
+    right: 36px;
+}
+.icone-topo-3:hover {
+    transform: scale(1.1);
+}
+.info-topo {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    right: -50px;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.icones-menu {
+    width: 20px;
+    position: absolute;
+    top: 13px;
+    padding-left: 18px;
+    display: inline-block;
+    pointer-events: none;
+}
+nav#menu ul {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 135px;
+    padding-top: 5px;
+    width: 1240px;
+    background-color: rgb(100, 100, 100);
+    border-top: 2px solid rgb(114, 114, 114);
+    z-index: 2;
+}
+nav#menu ul::before {
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    content: "";
+    width: 1280px;
+    height: 1px;
+    box-shadow: 0px 0px 5px black;
+    background-color: rgba(255, 255, 255, 0);
+}
+nav#menu ul li {
+    display: inline-block;
+    padding: 0px 15px 0px 45px;
+    margin-left: 5px;
+    margin-right: -5px;
+    color: white;
+    transition: all 0.3s;
+    background-color: rgb(61, 61, 61);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18pt;
+}
+nav#menu ul li:hover {
+    background-color: rgb(59, 105, 192);
+    transition: all 0.5s;
+}
+div#modo-noturno {
+    position: relative;
+    width: 102px;
+    padding: 0px 10px;
+    transition: all 0.5s;
+    z-index: 2;
+    left: 87.8%;
+    bottom: 263px;
+    
+}
+div#modo-noturno:hover {
+    background-image: url("../img/fundo-botao.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    padding: 0px 10px;
+    transform: scale(1.03);
+    transition: all 0.8s;
+}
+img#lampada {
+    position: relative;
+    top: 2px;
+}
+span.info-lamp {
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    vertical-align: 25%;
+    padding-right: 5px;
+}
+a.link-lamp {
+    text-decoration: none;
+}
+
+/* INFORMAÇÕES */
+
+.intro-opacidade {
+    position: absolute;
+    opacity: 0.7;
+    width: 1280px;
+    height: 250px;
+    background-color: black;
+}
+.intro-texto {
+    position: absolute;
+    color: white;
+    font-size: 50pt;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 250px;
+    top: 300px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* CORPO */
+
+section#corpo {
+    display: block;
+    float: left;
+    width: 840px;
+    padding-right: 25px;
+}
+ul#servicos {
+    list-style: none;
+}
+ul#servicos li {
+    float: left;
+    margin: 10px 10px;
+    width: 380px;
+    height: 150px;
+    background-color: black;
+    color: rgb(0, 0, 0);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 20pt;
+    text-align: center;
+    line-height: 150px;
+    box-shadow: 1px 1px 4px black;
+    transition: all 0.3s;
+    background-size: 110%;
+    background-position: 50% 50%;
+}
+ul#servicos li:hover {
+    font-size: 21pt;
+    transform: scale(1.03);
+    transition: all ease 0.5s;
+    background-size: 100%;
+    background-position: 50% 50%;
+}
+ul#servicos li#foto-01 {
+    background-image: url('../img/projetos.jpg');
+}
+ul#servicos li#foto-02 {
+    background-image: url('../img/construcoes.jpg');
+    color: white;
+}
+ul#servicos li#foto-03 {
+    background-image: url('../img/reformas.jpg');
+}
+ul#servicos li#foto-04 {
+    background-image: url('../img/engenharia.jpg');
+    color: white;
+}
+ul#servicos li#foto-05 {
+    background-image: url('../img/plantas-humanizadas.webp');
+}
+ul#servicos li#foto-06 {
+    background-image: url('../img/arquitetura.jpg');
+    color: white;
+}
+
+/* LATERAL */
+
+aside#lateral {
+    display: block;
+    float: right;
+    width: 350px;
+    padding-right: 45px;
+    padding-top: 15px;
+}
+form  {
+    display: table;
+    width: 30px;
+}
+form fieldset {
+    background-color: rgb(226, 226, 226);
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-top: -25px;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.726);
+}
+form legend {
+    font-size: 18pt;
+    padding-top: 50px;
+}
+form p { 
+    display: table-row;
+}
+label.dados { 
+    display: table-cell;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    font-size: 15pt;
+}
+label.ped {
+    display: table-cell;
+    padding-bottom: 10px;
+    font-size: 15pt;
+}
+input {
+    display: table-cell;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 12pt;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    padding: 5px;
+}
+select {
+    border-radius: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 13pt;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+}
+textarea {
+    border-radius: 5px;
+    width: 195px;
+    font-family: 'Arial', sans-serif;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+}
+input.botao-enviar {
+    font-size: 14pt;
+    width: 100px;
+    transform: scale(0.9);
+    margin-left: 220px;
+    background-color: rgb(241, 241, 241);
+    transition: all 0.2s;
+}
+input.botao-enviar:hover {
+    color: white;
+    background-color: rgb(119, 119, 197);
+    transition: all 0.3s;
+}
+
+/* RODAPÉ */
+
+footer#rodape {
+    display: block;
+    clear: both;
+    background-color: rgb(32, 32, 32);
+    width: 1280px;
+    height: 200px;
+    margin-top: 680px;
+}
+img#logo-rodape {
+    margin-left: 50%;
+    margin-top: 35px;
+    transform: translateX(-50%);
+    filter: drop-shadow(1px 1px 1px #000000);
+}
+nav#menu-rodape ul {
+    margin-left: 49%;
+    transform: translateX(-50%);
+    margin-top: -20px;
+    width: 340px;
+}
+nav#menu-rodape ul li {
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18pt;
+    color: white;
+    padding: 10px;
+    filter: drop-shadow(1px 1px 1px #000000)
+}
+nav#menu-rodape ul li:hover {
+    text-decoration: underline;
+}
+div#info-rodape {
+    width: 100px;
+    height: 100px;
+    margin-left: 88%;
+    margin-top: -75px;
+}
+div#info-rodape a {
+    text-decoration: none;
+}
+div#info-rodape img {
+    padding-left: 15px;
+    filter: invert(100%) drop-shadow(1px 1px 4px #000000);
+}
+div#info-rodape img:hover {
+    transform: scale(1.1);
+}
+input#contato-rodape {
+    width: 100px;
+    font-size: 15pt;
+    margin-top: 10px;
+    text-decoration: none;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.521);
+}
+input#contato-rodape:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+div#copyright {
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    height: 40px;
+    background-color: rgb(27, 27, 27)
+}
